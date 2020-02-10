@@ -1,0 +1,23 @@
+{
+  "name": "@warren-bank/node-hls-downloader-tubitv",
+  "version": "1.0.0",
+  "main": "lib/process_cli.js",
+  "description": "Command-line utility for downloading an offline copy of TubiTV HLS video streams.",
+  "license": "GPL-2.0",
+  "bin": {
+    "tubidl": "bin/tubitv-downloader.js"
+  },
+  "dependencies": {
+    "@warren-bank/node-hls-downloader": "^4.0.2",
+    "@warren-bank/node-process-argv": "^1.1.0"
+  },
+  "author": {
+    "name": "Warren R. Bank",
+    "email": "warren.r.bank@gmail.com",
+    "url": "https://github.com/warren-bank"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/warren-bank/node-hls-downloader-tubitv"
+  }
+}
