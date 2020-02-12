@@ -12,19 +12,21 @@ const argv_flags = {
   "--log-level":              {num:   "int"},
   "--max-concurrency":        {num:   "int"},
   "--directory-prefix":       {},
-  "--url":                    {}
+  "--url":                    {},
+  "--input-file":             {file: "lines"}
 }
 
 const argv_flag_aliases = {
   "--help":                   ["-h"],
-  "--version":                ["-V"],
+  "--version":                ["-v"],
   "--quiet":                  ["-q"],
   "--dry-run":                ["-dr"],
   "--no-mp4":                 ["-nm"],
   "--log-level":              ["-ll"],
   "--max-concurrency":        ["-mc", "--threads"],
   "--directory-prefix":       ["-P"],
-  "--url":                    ["-u"]
+  "--url":                    ["-u"],
+  "--input-file":             ["-i"]
 }
 
 let argv_vals = {}
@@ -79,31 +81,15 @@ if (argv_vals["--directory-prefix"]) {
   }
 }
 
-if (!argv_vals["--url"]) {
+if (argv_vals["--input-file"] && argv_vals["--input-file"].length) {
+  if (argv_vals["--url"]) {
+    argv_vals["--input-file"].unshift(argv_vals["--url"])
+    delete argv_vals["--url"]
+  }
+}
+else if (!argv_vals["--url"]) {
   console.log('ERROR: TubiTV URL is required')
   process.exit(0)
-}
-
-{
-  const url_pattern = /^https?:\/\/(?:[^\.]+\.)*tubitv\.com\/(movies|tv-shows|series)\/\d+(?:\/.+)?$/i
-  const matches     = url_pattern.exec(argv_vals["--url"])
-
-  if (!matches) {
-    console.log('ERROR: TubiTV URL is not correctly formatted')
-    process.exit(0)
-  }
-
-  switch(matches[1].toLowerCase()) {
-    case 'movies':
-      argv_vals["--url-type"] = 'movie'
-      break
-    case 'tv-shows':
-      argv_vals["--url-type"] = 'episode'
-      break
-    case 'series':
-      argv_vals["--url-type"] = 'series'
-      break
-  }
 }
 
 module.exports = argv_vals

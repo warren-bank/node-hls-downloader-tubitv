@@ -50,3 +50,16 @@ tubidl -dr -ll 2 -u 'https://tubitv.com/series/4068/the_greatest_american_hero'
 tubidl -dr -ll 3 -u 'https://tubitv.com/series/4068/the_greatest_american_hero'
 
 # ------------------------------------------------------------------------------
+
+# =================================
+# download a series (advanced)
+# =================================
+
+tubidl -dr -ll 1 -u 'https://tubitv.com/series/4068/the_greatest_american_hero' >'episode_urls.txt'
+tubidl -dr -ll 2 -u 'https://tubitv.com/series/4068/the_greatest_american_hero' >'convert_mp4s.sh'
+
+tubidl -nm -mc 5 -i 'episode_urls.txt' >'log.txt' 2>&1
+
+./convert_mp4s.sh
+
+# ------------------------------------------------------------------------------

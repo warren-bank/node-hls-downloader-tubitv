@@ -7,7 +7,7 @@ options:
 "--help"
     Print a help message describing all command-line options.
 
-"-V"
+"-v"
 "--version"
     Display the version.
 
@@ -45,6 +45,10 @@ options:
 "-u" <URL>
 "--url" <URL>
     Specify the URL of master manifest.
+
+"-i <filepath>"
+"--input-file <filepath>"
+    Read URLs from a local text file. Format is one URL per line.
 `
 
 module.exports = help

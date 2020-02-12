@@ -51,5 +51,18 @@ call tubidl -dr -ll 3 -u "https://tubitv.com/series/4068/the_greatest_american_h
 
 rem :: -------------------------------------------------------------------------
 
+rem :: =================================
+rem :: download a series (advanced)
+rem :: =================================
+
+call tubidl -dr -ll 1 -u "https://tubitv.com/series/4068/the_greatest_american_hero" >"episode_urls.txt"
+call tubidl -dr -ll 2 -u "https://tubitv.com/series/4068/the_greatest_american_hero" >"convert_mp4s.bat"
+
+call tubidl -nm -mc 5 -i "episode_urls.txt" >"log.txt" 2>&1
+
+call "convert_mp4s.bat"
+
+rem :: -------------------------------------------------------------------------
+
 echo.
 pause
