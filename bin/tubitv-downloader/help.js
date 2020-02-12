@@ -11,9 +11,20 @@ options:
 "--version"
     Display the version.
 
-"-u" <URL>
-"--url" <URL>
-    Specify the URL of master manifest.
+"-q"
+"--quiet"
+    Do not print a verbose log of operations.
+
+"-ll" <integer>
+"--log-level" <integer>
+    Specify the log verbosity level.
+      0 = no output (same as --quiet)
+      1 = include only TubiTV episode URLs
+      2 = include all operational metadata (default)
+
+"-dr"
+"--dry-run"
+    Do not write to the file system.
 
 "-nm"
 "--no-mp4"
@@ -29,6 +40,10 @@ options:
 "--directory-prefix" <dirpath>
     Specifies the directory where the resulting file structure will be saved to.
     The default is "." (the current directory).
+
+"-u" <URL>
+"--url" <URL>
+    Specify the URL of master manifest.
 `
 
 module.exports = help

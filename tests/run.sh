@@ -16,25 +16,36 @@ PATH="${workspace}/node_modules/.bin:${PATH}"
 # ------------------------------------------------------------------------------
 
 # =================================
-# a movie
+# download a movie
 # =================================
 
-tubidl -mc 5 -u 'https://tubitv.com/movies/465487/citizenfour'
+tubidl -q -mc 5 -u 'https://tubitv.com/movies/465487/citizenfour'
 
 # ------------------------------------------------------------------------------
 
 # =================================
-# an episode
+# download an episode
 # =================================
 
-tubidl -mc 5 -u 'https://tubitv.com/tv-shows/498780/s01_e02_the_grand_deception_part_2'
+tubidl -q -mc 5 -u 'https://tubitv.com/tv-shows/498780/s01_e02_the_grand_deception_part_2'
 
 # ------------------------------------------------------------------------------
 
 # =================================
-# a series
+# download a series
 # =================================
 
 tubidl -mc 5 -u 'https://tubitv.com/series/4068/the_greatest_american_hero'
+
+# ------------------------------------------------------------------------------
+
+# =================================
+# print a trace of the operations
+# that would occur IF a series
+# were to be downloaded
+# =================================
+
+tubidl -dr -ll 1 -u 'https://tubitv.com/series/4068/the_greatest_american_hero'
+tubidl -dr -ll 2 -u 'https://tubitv.com/series/4068/the_greatest_american_hero'
 
 # ------------------------------------------------------------------------------

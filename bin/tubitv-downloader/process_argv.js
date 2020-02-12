@@ -6,7 +6,10 @@ const fs   = require('fs')
 const argv_flags = {
   "--help":                   {bool:  true},
   "--version":                {bool:  true},
+  "--quiet":                  {bool:  true},
+  "--dry-run":                {bool:  true},
   "--no-mp4":                 {bool:  true},
+  "--log-level":              {num:   "int"},
   "--max-concurrency":        {num:   "int"},
   "--directory-prefix":       {},
   "--url":                    {}
@@ -15,7 +18,10 @@ const argv_flags = {
 const argv_flag_aliases = {
   "--help":                   ["-h"],
   "--version":                ["-V"],
+  "--quiet":                  ["-q"],
+  "--dry-run":                ["-dr"],
   "--no-mp4":                 ["-nm"],
+  "--log-level":              ["-ll"],
   "--max-concurrency":        ["-mc", "--threads"],
   "--directory-prefix":       ["-P"],
   "--url":                    ["-u"]
@@ -43,8 +49,19 @@ if (argv_vals["--version"]) {
   process.exit(0)
 }
 
+if (typeof argv_vals["--log-level"] !== 'number') {
+  argv_vals["--log-level"] = 2
+}
+if (argv_vals["--log-level"] <= 0) {
+  argv_vals["--log-level"] = 0
+  argv_vals["--quiet"] = true
+}
+if (argv_vals["--log-level"] > 2) {
+  argv_vals["--log-level"] = 2
+}
+
 if (typeof argv_vals["--max-concurrency"] === 'number') {
-  if (argv_vals["--max-concurrency"] < 2) {
+  if (argv_vals["--max-concurrency"] <= 1) {
     argv_vals["--max-concurrency"] = 1
   }
 }
