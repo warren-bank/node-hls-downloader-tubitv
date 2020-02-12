@@ -50,18 +50,18 @@ if (argv_vals["--version"]) {
 }
 
 if (typeof argv_vals["--log-level"] !== 'number') {
-  argv_vals["--log-level"] = 2
+  argv_vals["--log-level"] = 3
 }
 if (argv_vals["--log-level"] <= 0) {
   argv_vals["--log-level"] = 0
   argv_vals["--quiet"] = true
 }
-if (argv_vals["--log-level"] > 2) {
-  argv_vals["--log-level"] = 2
+if (argv_vals["--log-level"] > 3) {
+  argv_vals["--log-level"] = 3
 }
 
 if (typeof argv_vals["--max-concurrency"] === 'number') {
-  if (argv_vals["--max-concurrency"] <= 1) {
+  if (argv_vals["--max-concurrency"] < 1) {
     argv_vals["--max-concurrency"] = 1
   }
 }

@@ -64,8 +64,9 @@ options:
 "--log-level" <integer>
     Specify the log verbosity level.
       0 = no output (same as --quiet)
-      1 = include only TubiTV episode URLs
-      2 = include all operational metadata (default)
+      1 = include only episode TubiTV URLs
+      2 = include only episode ffmpeg commands
+      3 = include all operational metadata (default)
 
 "-dr"
 "--dry-run"
@@ -109,11 +110,12 @@ options:
   ```bash
     tubidl -dr -ll 1 -u 'https://tubitv.com/series/4068/the_greatest_american_hero'
     tubidl -dr -ll 2 -u 'https://tubitv.com/series/4068/the_greatest_american_hero'
+    tubidl -dr -ll 3 -u 'https://tubitv.com/series/4068/the_greatest_american_hero'
   ```
 
 ##### suggestions:
 
-1. download with options: `--no-mp4 --log-level 2`
+1. download with options: `--no-mp4 --log-level 3`
    * redirect stdout to a log file
    * when download completes, check the log file for any error messages
    * if any _.ts_ chunks encountered a download problem
@@ -124,6 +126,7 @@ options:
 2. repeat the above process until the log file shows no download errors
 3. finally, convert the HLS stream to mp4
    * the `ffmpeg` command to perform this conversion is included in the log file
+   * when converting the episodes in a series, a list of all `ffmpeg` commands can be generated with the options: `--dry-run --log-level 2`
 
 #### Requirements:
 

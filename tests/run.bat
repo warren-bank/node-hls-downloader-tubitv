@@ -47,6 +47,7 @@ rem :: =================================
 
 call tubidl -dr -ll 1 -u "https://tubitv.com/series/4068/the_greatest_american_hero"
 call tubidl -dr -ll 2 -u "https://tubitv.com/series/4068/the_greatest_american_hero"
+call tubidl -dr -ll 3 -u "https://tubitv.com/series/4068/the_greatest_american_hero"
 
 rem :: -------------------------------------------------------------------------
 

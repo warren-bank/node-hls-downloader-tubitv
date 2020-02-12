@@ -47,5 +47,6 @@ tubidl -mc 5 -u 'https://tubitv.com/series/4068/the_greatest_american_hero'
 
 tubidl -dr -ll 1 -u 'https://tubitv.com/series/4068/the_greatest_american_hero'
 tubidl -dr -ll 2 -u 'https://tubitv.com/series/4068/the_greatest_american_hero'
+tubidl -dr -ll 3 -u 'https://tubitv.com/series/4068/the_greatest_american_hero'
 
 # ------------------------------------------------------------------------------

@@ -19,8 +19,9 @@ options:
 "--log-level" <integer>
     Specify the log verbosity level.
       0 = no output (same as --quiet)
-      1 = include only TubiTV episode URLs
-      2 = include all operational metadata (default)
+      1 = include only episode TubiTV URLs
+      2 = include only episode ffmpeg commands
+      3 = include all operational metadata (default)
 
 "-dr"
 "--dry-run"
