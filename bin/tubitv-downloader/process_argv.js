@@ -92,4 +92,9 @@ else if (!argv_vals["--url"]) {
   process.exit(0)
 }
 
+if (argv_vals["--dry-run"] && argv_vals["--quiet"]) {
+  console.log('WARNING: Nothing to do')
+  process.exit(0)
+}
+
 module.exports = argv_vals
