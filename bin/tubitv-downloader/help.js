@@ -44,11 +44,11 @@ options:
 
 "-u" <URL>
 "--url" <URL>
-    Specify the URL of master manifest.
+    Specify a TubiTV URL. (movie, episode, or series)
 
 "-i <filepath>"
 "--input-file <filepath>"
-    Read URLs from a local text file. Format is one URL per line.
+    Read TubiTV URLs from a local text file. Format is one URL per line.
 `
 
 module.exports = help
