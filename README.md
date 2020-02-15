@@ -109,14 +109,13 @@ options:
 * download a series:
   ```bash
     tubidl -mc 5 -u 'https://tubitv.com/series/4068/the_greatest_american_hero'
-
+  ```
 * print a trace of the operations that would occur IF a series were to be downloaded:
   ```bash
     tubidl -dr -ll 1 -u 'https://tubitv.com/series/4068/the_greatest_american_hero'
     tubidl -dr -ll 2 -u 'https://tubitv.com/series/4068/the_greatest_american_hero'
     tubidl -dr -ll 3 -u 'https://tubitv.com/series/4068/the_greatest_american_hero'
   ```
-
 * download a series (advanced):
   ```bash
     tubidl -dr -ll 1 -u 'https://tubitv.com/series/4068/the_greatest_american_hero' >'episode_urls.txt'
