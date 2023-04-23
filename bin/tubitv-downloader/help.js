@@ -35,8 +35,8 @@ options:
 "--mp4-filename" <integer>
     Specify the numeric mode used to configure the filename of the .mp4 file container.
       0 = "video.mp4" (default)
-      1 = "${movie-or-episode-title}.mp4"
-      2 = "${movie-title}.mp4" or "${series-title} - ${episode-title}.mp4"
+      1 = "\${movie-or-episode-title}.mp4"
+      2 = "\${movie-title}.mp4" or "\${series-title} - \${episode-title}.mp4"
 
 "-mc" <integer>
 "--max-concurrency" <integer>
