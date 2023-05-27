@@ -2,12 +2,6 @@
 
 Command-line utility for downloading an offline copy of [TubiTV](https://tubitv.com/) HLS video streams.
 
-#### Installation:
-
-```bash
-npm install --global @warren-bank/node-hls-downloader-tubitv
-```
-
 #### Features:
 
 * accepts URLs that identify:
@@ -40,6 +34,14 @@ npm install --global @warren-bank/node-hls-downloader-tubitv
     |  |  |  |- video.mp4
     |  |  |  |- video.{language}.srt
   ```
+
+- - - -
+
+#### Installation:
+
+```bash
+npm install --global @warren-bank/node-hls-downloader-tubitv
+```
 
 #### Usage:
 
@@ -133,7 +135,7 @@ options:
     ./convert_mp4s.sh
   ```
 
-##### suggestions:
+##### Suggestions:
 
 1. download with options: `--no-mp4 --log-level 3`
    * redirect stdout to a log file
@@ -148,23 +150,17 @@ options:
    * the `ffmpeg` command to perform this conversion is included in the log file
    * when converting the episodes in a series, a list of all `ffmpeg` commands can be generated with the options: `--dry-run --log-level 2`
 
+- - - -
+
 #### Requirements:
 
-* Node version: v6.13.0 (and higher)
-  * [ES6 support](http://node.green/)
-    * v0.12.18+: Promise
-    * v4.08.03+: Object shorthand methods
-    * v5.12.00+: spread operator
-    * v6.04.00+: Proxy constructor
-    * v6.04.00+: Proxy 'apply' handler
-    * v6.04.00+: Reflect.apply
-  * [URL](https://nodejs.org/api/url.html)
-    * v6.13.00+: [Browser-compatible URL class](https://nodejs.org/api/url.html#url_class_url)
-  * tested in:
-    * v7.9.0
+* Node.js version: v8.6.0 (and higher)
+  - transitive [dependency](https://github.com/warren-bank/node-hls-downloader-tubitv/blob/master/package.json#L12-L13) requirements:
+    * v8.06.00+: [`@warren-bank/node-hls-downloader`](https://github.com/warren-bank/node-hls-downloader#requirements)
+    * v8.06.00+: [`@warren-bank/node-process-argv`](https://github.com/warren-bank/node-process-argv#requirements)
 * FFmpeg
-  * not required in `PATH` when using the `--no-mp4` CLI option
-  * successfully tested with version: _4.1.3_
+  - not required in `PATH` when using the `--no-mp4` CLI option
+    * successfully tested with version: 4.1.3
 
 #### Legal:
 
