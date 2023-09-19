@@ -1,6 +1,6 @@
 {
   "name": "@warren-bank/node-hls-downloader-tubitv",
-  "version": "1.5.6",
+  "version": "1.5.7",
   "main": "lib/process_cli.js",
   "description": "Command-line utility for downloading an offline copy of TubiTV HLS video streams.",
   "license": "GPL-2.0",
