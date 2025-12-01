@@ -19,7 +19,7 @@ rem :: =================================
 rem :: download a movie
 rem :: =================================
 
-call tubidl -q -mc 5 -u "https://tubitv.com/movies/465487/citizenfour"
+call tubidl -q -mc 5 -u "https://tubitv.com/movies/300443/1984"
 
 rem :: -------------------------------------------------------------------------
 
@@ -27,7 +27,7 @@ rem :: =================================
 rem :: download an episode
 rem :: =================================
 
-call tubidl -q -mc 5 -u "https://tubitv.com/tv-shows/498780/s01_e02_the_grand_deception_part_2"
+call tubidl -q -mc 5 -u "https://tubitv.com/tv-shows/200255733/s01-e01-where-is-everybody"
 
 rem :: -------------------------------------------------------------------------
 
@@ -35,7 +35,7 @@ rem :: =================================
 rem :: download a series
 rem :: =================================
 
-call tubidl -mc 5 -u "https://tubitv.com/series/4068/the_greatest_american_hero"
+call tubidl -mc 5 -u "https://tubitv.com/series/300017350/the-twilight-zone"
 
 rem :: -------------------------------------------------------------------------
 
@@ -45,9 +45,9 @@ rem :: that would occur IF a series
 rem :: were to be downloaded
 rem :: =================================
 
-call tubidl -dr -ll 1 -u "https://tubitv.com/series/4068/the_greatest_american_hero"
-call tubidl -dr -ll 2 -u "https://tubitv.com/series/4068/the_greatest_american_hero"
-call tubidl -dr -ll 3 -u "https://tubitv.com/series/4068/the_greatest_american_hero"
+call tubidl -dr -ll 1 -u "https://tubitv.com/series/300017350/the-twilight-zone"
+call tubidl -dr -ll 2 -u "https://tubitv.com/series/300017350/the-twilight-zone"
+call tubidl -dr -ll 3 -u "https://tubitv.com/series/300017350/the-twilight-zone"
 
 rem :: -------------------------------------------------------------------------
 
@@ -55,8 +55,8 @@ rem :: =================================
 rem :: download a series (advanced)
 rem :: =================================
 
-call tubidl -dr -ll 1 -u "https://tubitv.com/series/4068/the_greatest_american_hero" >"episode_urls.txt"
-call tubidl -dr -ll 2 -u "https://tubitv.com/series/4068/the_greatest_american_hero" >"convert_mp4s.bat"
+call tubidl -dr -ll 1 -u "https://tubitv.com/series/300017350/the-twilight-zone" >"episode_urls.txt"
+call tubidl -dr -ll 2 -u "https://tubitv.com/series/300017350/the-twilight-zone" >"convert_mp4s.bat"
 
 call tubidl -nm -mc 5 -i "episode_urls.txt" >"log.txt" 2>&1
 

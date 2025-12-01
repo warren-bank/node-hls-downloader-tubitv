@@ -109,26 +109,26 @@ options:
 
 * download a movie:
   ```bash
-    tubidl -q -mc 5 -u 'https://tubitv.com/movies/465487/citizenfour'
+    tubidl -q -mc 5 -u 'https://tubitv.com/movies/300443/1984'
   ```
 * download an episode:
   ```bash
-    tubidl -q -mc 5 -u 'https://tubitv.com/tv-shows/498780/s01_e02_the_grand_deception_part_2'
+    tubidl -q -mc 5 -u 'https://tubitv.com/tv-shows/200255733/s01-e01-where-is-everybody'
   ```
 * download a series:
   ```bash
-    tubidl -mc 5 -u 'https://tubitv.com/series/4068/the_greatest_american_hero'
+    tubidl -mc 5 -u 'https://tubitv.com/series/300017350/the-twilight-zone'
   ```
 * print a trace of the operations that would occur IF a series were to be downloaded:
   ```bash
-    tubidl -dr -ll 1 -u 'https://tubitv.com/series/4068/the_greatest_american_hero'
-    tubidl -dr -ll 2 -u 'https://tubitv.com/series/4068/the_greatest_american_hero'
-    tubidl -dr -ll 3 -u 'https://tubitv.com/series/4068/the_greatest_american_hero'
+    tubidl -dr -ll 1 -u 'https://tubitv.com/series/300017350/the-twilight-zone'
+    tubidl -dr -ll 2 -u 'https://tubitv.com/series/300017350/the-twilight-zone'
+    tubidl -dr -ll 3 -u 'https://tubitv.com/series/300017350/the-twilight-zone'
   ```
 * download a series (advanced):
   ```bash
-    tubidl -dr -ll 1 -u 'https://tubitv.com/series/4068/the_greatest_american_hero' >'episode_urls.txt'
-    tubidl -dr -ll 2 -u 'https://tubitv.com/series/4068/the_greatest_american_hero' >'convert_mp4s.sh'
+    tubidl -dr -ll 1 -u 'https://tubitv.com/series/300017350/the-twilight-zone' >'episode_urls.txt'
+    tubidl -dr -ll 2 -u 'https://tubitv.com/series/300017350/the-twilight-zone' >'convert_mp4s.sh'
 
     tubidl -nm -mc 5 -i 'episode_urls.txt' >'log.txt' 2>&1
 
